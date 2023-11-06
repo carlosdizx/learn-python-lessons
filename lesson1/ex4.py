@@ -1,3 +1,6 @@
+from matplotlib_venn import venn3
+import matplotlib.pyplot as plt
+
 # Conjunto de socios que juegan al fútbol
 futbolistas = {"Alice", "Bob", "Charlie", "David", "Eva"}
 
@@ -19,3 +22,8 @@ print("Juegan futbol o baloncesto:", futbol_o_baloncesto)
 print("Juegan al menos 1 deporte:", almenos_un_deporte)
 print("Juegan exactamente un deporte:", exactamente_un_deporte)
 print("Juegan exactamente dos deportes:", exactamente_dos_deportes, len(exactamente_dos_deportes))
+
+# Representación gráfica
+venn3([futbolistas, baloncestistas, tenistas], set_labels=('Futbolistas', 'Baloncestistas', 'Tenistas'))
+plt.title("Diagrama de Venn para clientes futbolistas, baloncestistas y tenistas")
+plt.show()
